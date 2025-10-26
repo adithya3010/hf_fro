@@ -12,7 +12,7 @@ export function useSocket(username, roomId) {
   useEffect(() => {
     if (!username || !roomId) return;
 
-    const newSocket = io('http://localhost:3001', {
+    const newSocket = io('https://chatappbackend-khfk.onrender.com', {
       query: { username, roomId },
       reconnectionAttempts: 5,
       reconnectionDelay: 1000,
