@@ -37,7 +37,7 @@ export function AuthProvider({ children }) {
   const login = async (userData) => {
     try {
       // Check if user exists in backend and get their role
-      const response = await fetch('http://localhost:3001/api/users/auth', {
+      const response = await fetch('https://chatappbackend-khfk.onrender.com/api/users/auth', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ export function AuthProvider({ children }) {
       console.log('Updating user with ID:', userId);
       console.log('Update payload:', updates);
       
-      const response = await fetch(`http://localhost:3001/api/users/${userId}`, {
+      const response = await fetch(`https://chatappbackend-khfk.onrender.com/api/users/${userId}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
