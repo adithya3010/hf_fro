@@ -66,7 +66,7 @@ export default function ChatApp() {
   useEffect(() => {
     if (!username) return;
 
-    fetch("http://localhost:3001/api/rooms")
+    fetch("https://chatappbackend-khfk.onrender.com/api/rooms")
       .then(async (res) => {
         if (!res.ok) {
           const error = await res.text();
@@ -95,7 +95,7 @@ export default function ChatApp() {
 
   const handleCreateRoom = async (name) => {
     try {
-      const response = await fetch("http://localhost:3001/api/rooms", {
+      const response = await fetch("https://chatappbackend-khfk.onrender.com/api/rooms", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name, createdBy: username }),
