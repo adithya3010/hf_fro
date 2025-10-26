@@ -11,7 +11,7 @@ export function ModeratorSettings() {
   useEffect(() => {
     if (!isModerator) return;
 
-    fetch('http://localhost:3001/api/users')
+    fetch('https://chatappbackend-khfk.onrender.com/api/users')
       .then(res => res.json())
       .then(data => {
         setUsers(data);
@@ -26,7 +26,7 @@ export function ModeratorSettings() {
   const toggleModeratorStatus = async (userId, makeModarator) => {
     try {
       const endpoint = makeModarator ? 'make-moderator' : 'remove-moderator';
-      const response = await fetch(`http://localhost:3001/api/users/${endpoint}/${userId}`, {
+      const response = await fetch(`https://chatappbackend-khfk.onrender.com/api/users/${endpoint}/${userId}`, {
         method: 'POST'
       });
 
