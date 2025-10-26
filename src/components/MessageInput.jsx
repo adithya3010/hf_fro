@@ -67,7 +67,7 @@ export function MessageInput({ onSendMessage, onTyping, onStopTyping, isMuted })
               style: { background: '#000000', color: '#ffffff' }
             });
 
-            const resp = await fetch('http://localhost:3001/api/upload/pdf', {
+            const resp = await fetch('https://chatappbackend-khfk.onrender.com/api/upload/pdf', {
               method: 'POST',
               body: form,
               // Add upload progress handling
@@ -88,7 +88,7 @@ export function MessageInput({ onSendMessage, onTyping, onStopTyping, isMuted })
               });
             } else {
               const json = await resp.json();
-              const url = `http://localhost:3001${json.url}`;
+              const url = `https://chatappbackend-khfk.onrender.com${json.url}`;
               toast.success(`${f.name} uploaded successfully`, {
                 description: 'PDF is now available in chat',
                 style: { background: '#000000', color: '#ffffff' }
@@ -124,7 +124,7 @@ export function MessageInput({ onSendMessage, onTyping, onStopTyping, isMuted })
                   style: { background: '#000000', color: '#ffffff' }
                 });
 
-                const resp = await fetch('http://localhost:3001/api/upload/video', {
+                const resp = await fetch('https://chatappbackend-khfk.onrender.com/api/upload/video', {
                   method: 'POST',
                   body: form
                 });
@@ -134,7 +134,7 @@ export function MessageInput({ onSendMessage, onTyping, onStopTyping, isMuted })
                 }
 
                 const json = await resp.json();
-                const url = `http://localhost:3001${json.url}`;
+                const url = `https://chatappbackend-khfk.onrender.com${json.url}`;
 
                 toast.success(`${f.name} uploaded successfully`, {
                   description: 'Video is now available in chat',
