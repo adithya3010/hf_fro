@@ -36,14 +36,14 @@ export function RoomList({ rooms, currentRoom, onRoomSelect, onCreateRoom }) {
             <BackgroundOverlay />
             <div className="h-full relative z-10 flex flex-col bg-white/10 dark:bg-slate-950/50 rounded-lg overflow-hidden backdrop-blur-xl border border-white/20 shadow-2xl">
 
-                <div className="p-6 border-b border-white/10 dark:border-slate-800/50 bg-gradient-to-br from-indigo-500/10 to-purple-500/10">
-                    <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white via-indigo-200 to-purple-200 bg-clip-text text-transparent flex items-center gap-2">
+                <div className="p-6 border-b border-white/10 dark:border-slate-800/50 bg-gradient-to-br from-indigo-500/10 to-indigo-900/10">
+                    <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white via-indigo-200 to-indigo-500 bg-clip-text text-transparent flex items-center gap-2">
                         <Users className="w-6 h-6 text-indigo-400" />
                         Chat Rooms
                     </h2>
                     <Button
                         onClick={() => setIsCreating(true)}
-                        className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 border border-indigo-400/20 shadow-lg shadow-indigo-950/30 hover:shadow-xl hover:shadow-indigo-900/40 hover:scale-[1.02]"
+                        className="w-full bg-gradient-to-r from-indigo-600 to-indigo-600 text-white hover:from-indigo-700 hover:to-indigo-700 transition-all duration-300 border border-indigo-400/20 shadow-lg shadow-indigo-950/30 hover:shadow-xl hover:shadow-indigo-900/40 hover:scale-[1.02]"
                         disabled={isCreating || isSubmitting}
                     >
                         <Plus className="w-5 h-5 mr-2" />
@@ -58,7 +58,7 @@ export function RoomList({ rooms, currentRoom, onRoomSelect, onCreateRoom }) {
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             onSubmit={handleCreateRoom}
-                            className="p-4 border-b border-white/10 dark:border-slate-800/50 bg-gradient-to-br from-indigo-900/20 to-purple-900/20 backdrop-blur-sm"
+                            className="p-4 border-b border-white/10 dark:border-slate-800/50 bg-gradient-to-br from-indigo-500/20 to-indigo-900/20 backdrop-blur-sm"
                         >
                             <input
                                 type="text"
@@ -87,7 +87,7 @@ export function RoomList({ rooms, currentRoom, onRoomSelect, onCreateRoom }) {
                                 <Button
                                     type="submit"
                                     disabled={!newRoomName.trim() || isSubmitting}
-                                    className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 text-white hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 shadow-lg shadow-indigo-950/20 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="flex-1 bg-gradient-to-r from-indigo-600 to-indigo-600 text-white hover:from-indigo-700 hover:to-indigo-700 transition-all duration-300 shadow-lg shadow-indigo-950/20 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {isSubmitting ? (
                                         <>
