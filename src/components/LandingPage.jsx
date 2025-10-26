@@ -25,7 +25,7 @@ const LandingPage = () => {
           <div className="inline-flex items-center gap-2 rounded-full border border-white/10  px-4 py-2 text-sm uppercase tracking-[0.35em] text-white/70">
             CORE-
             <RotatingText
-              texts={["Connect", "Organise", "Resource", "Educate"]}
+              texts={["Connect", "Online", "React", "Educate"]}
               mainClassName="px-2 sm:px-2 md:px-3 bg-indigo-500 px-6 py-3 text-base font-semibold text-white shadow-lg shadow-indigo-500/30 transition overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
               staggerFrom={"last"}
               initial={{ y: "100%" }}
