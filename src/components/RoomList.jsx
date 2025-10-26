@@ -129,7 +129,7 @@ export function RoomList({ rooms, currentRoom, onRoomSelect, onCreateRoom }) {
                                 transition={{ delay: index * 0.05 }}
                                 className={`group relative p-4 flex items-center gap-4 border-b border-white/10 cursor-pointer last:border-b-0 transition-all duration-300 ${
                                     room._id === currentRoom?._id 
-                                        ? 'bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border-l-4 border-l-indigo-400 shadow-lg shadow-indigo-500/10' 
+                                        ? 'bg-gradient-to-r from-indigo-500/20 to-indigo-900/20 border-l-4 border-l-indigo-400 shadow-lg shadow-indigo-500/10' 
                                         : 'hover:bg-white/5 dark:hover:bg-slate-800/50 hover:border-l-4 hover:border-l-indigo-400/50'
                                 }`}
                                 onClick={() => onRoomSelect(room)}
@@ -137,8 +137,8 @@ export function RoomList({ rooms, currentRoom, onRoomSelect, onCreateRoom }) {
                                 {/* Room Icon/Avatar */}
                                 <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center transition-all duration-300 ${
                                     room._id === currentRoom?._id
-                                        ? 'bg-gradient-to-br from-indigo-500 to-purple-500 shadow-lg shadow-indigo-500/50'
-                                        : 'bg-gradient-to-br from-indigo-600/50 to-purple-600/50 group-hover:from-indigo-500/60 group-hover:to-purple-500/60'
+                                        ? 'bg-gradient-to-br from-indigo-500 to-indigo-900 shadow-lg shadow-indigo-500/50'
+                                        : 'bg-gradient-to-br from-indigo-600/50 to-indigo-900/50 group-hover:from-indigo-500/60 group-hover:to-indigo-900/60'
                                 }`}>
                                     <span className="text-xl font-bold text-white">
                                         {room.name.charAt(0).toUpperCase()}
@@ -182,7 +182,7 @@ export function RoomList({ rooms, currentRoom, onRoomSelect, onCreateRoom }) {
                             animate={{ opacity: 1, y: 0 }}
                             className="p-12 text-center"
                         >
-                            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-indigo-500/20 to-purple-500/20 flex items-center justify-center">
+                            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-indigo-500/20 to-indigo-900/20 flex items-center justify-center">
                                 <Users className="w-8 h-8 text-indigo-400/50" />
                             </div>
                             <p className="text-white/50 text-sm">
